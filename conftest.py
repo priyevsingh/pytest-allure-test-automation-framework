@@ -133,7 +133,6 @@ def _set_browser(browser):
 
     # Firefox options
     options = webdriver.FirefoxOptions()
-    options = webdriver.ChromeOptions()
     options.add_argument("--ignore-certificate-errors")
     options.add_argument("--ignore-ssl-errors")
     options.add_argument("--disable-infobars")
