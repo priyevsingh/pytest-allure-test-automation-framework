@@ -90,7 +90,7 @@ def setup(request, getBrowser):
     logger.info(
         f"Launching {getBrowser} browser and settings wait time to {settings.get('driver_wait')} seconds"
     )
-    driver.get(app.get("url"))
+    driver.get(app.get("app_url"))
     driver.maximize_window()
 
     request.cls.logger = logger
