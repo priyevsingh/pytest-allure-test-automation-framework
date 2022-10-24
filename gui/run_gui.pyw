@@ -3,7 +3,7 @@ import platform
 import PySimpleGUI as sg
 
 
-path = os.path.realpath(os.path.join(os.path.dirname(__file__)), "..")
+path = os.path.realpath(os.path.join(os.path.dirname(__file__), ".."))
 
 
 def run_gui():
@@ -14,7 +14,7 @@ def run_gui():
     sg.theme("Black")
 
     logo_path = os.path.realpath(
-        os.path.join(os.path.dirname(__file__)), "..", "gui", "logo.png"
+        os.path.join(os.path.dirname(__file__), "..", "gui", "logo.png")
     )
 
     layout = [
@@ -23,7 +23,7 @@ def run_gui():
             sg.Text(
                 "Test Automation Framework",
                 size=(40, 1),
-                font=("Arial Black", 16),
+                font=("Arial", 16),
                 text_color="white",
                 justification="center",
                 key="text",
@@ -37,7 +37,7 @@ def run_gui():
             sg.Text(
                 "Test Automation Framework",
                 size=(40, 1),
-                font=("Arial Black", 16),
+                font=("Arial", 16),
                 text_color="white",
                 justification="center",
                 key="text",
@@ -47,7 +47,7 @@ def run_gui():
             sg.Text(
                 "",
                 size=(20, 1),
-                font=("Arial Black", 16),
+                font=("Arial", 16),
                 text_color="white",
                 justification="center",
                 key="text",
@@ -57,7 +57,7 @@ def run_gui():
             sg.Text(
                 "Console output....",
                 size=(60, 1),
-                font=("Arial Black", 10),
+                font=("Arial", 10),
                 text_color="red",
                 key="-TEXT-",
             )
@@ -66,7 +66,7 @@ def run_gui():
             sg.Multiline(
                 size=(88, 20),
                 key="-OUTPUT-",
-                font=("Arial Black", 12),
+                font=("Arial", 12),
                 background_color="white",
                 text_color="black",
                 reroute_stdout=True,
@@ -74,7 +74,7 @@ def run_gui():
                 autoscroll=True,
             )
         ],
-        # [sg.Output(size=(88, 20), font='Arial Black 12', key='-OUTPUT-', background_color='white', text_color='black')],
+        # [sg.Output(size=(88, 20), font='Arial 12', key='-OUTPUT-', background_color='white', text_color='black')],
         [
             sg.Button("SETUP"),
             sg.VerticalSeparator(pad=((0, 0), (0, 1)), color="red"),
@@ -86,20 +86,20 @@ def run_gui():
         ],
         [sg.HorizontalSeparator(pad=((0, 0), (0, 1)), color="red")],
         [
-            sg.InputText(key="-FILEPATH-", size=(15, 2), font=("Arial Black", 16)),
+            sg.InputText(key="-FILEPATH-", size=(15, 2), font=("Arial", 16)),
             sg.FileBrowse(
                 file_types=(("Python Scripts", "*.py"), ("All Files", "*.*")),
                 key="-BROWSE-",
             ),
             #  sg.VerticalSeparator(pad=((0, 0), (0, 1)), color='red'),
-            #  sg.Spin(values=('chrome', 'firefox', 'edge'), initial_value='chrome', key='-BROWSER-', size=(10, 1), font=('Arial Black', 10)),
+            #  sg.Spin(values=('chrome', 'firefox', 'edge'), initial_value='chrome', key='-BROWSER-', size=(10, 1), font=('Arial', 10)),
             sg.VerticalSeparator(pad=((0, 0), (0, 1)), color="red"),
             sg.Button("RUN TEST CASE"),
             sg.VerticalSeparator(pad=((0, 0), (0, 1)), color="red"),
             sg.Button("RUN TEST SUITE"),
         ],
         [
-            sg.Text("Manual Command", size=(14, 1), font=("Arial Black", 16)),
+            sg.Text("Manual Command", size=(14, 1), font=("Arial", 16)),
             sg.Input(focus=True, key="-IN-", size=(14, 1)),
             sg.VerticalSeparator(pad=((0, 0), (0, 1)), color="red"),
             sg.Button("Run", bind_return_key=True),
@@ -116,7 +116,7 @@ def run_gui():
             sg.Text(
                 "Made with " + "\U0001F493" + " at <your-org-name>",
                 size=(20, 1),
-                font=("Arial Black", 12),
+                font=("Arial", 12),
                 text_color="red",
                 justification="left",
                 auto_size_text=True,
@@ -227,7 +227,7 @@ def run_gui():
                 + " @ <your-org-name> by <individual-or-team-name>\n\n <your-org-name> - All Rights Reserved \u00A9 {}".format(
                     time.strftime("%Y")
                 ),
-                font=("Arial Black", 9),
+                font=("Arial", 9),
                 text_color="red",
                 relative_location=(0, 0),
                 title="About",

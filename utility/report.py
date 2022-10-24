@@ -6,7 +6,7 @@ import socketserver
 
 
 rep_log_path = os.path.realpath(
-    os.path.join(os.path.dirname(__file__)), "..", "Reports", "logs", "gen_report.log"
+    os.path.join(os.path.dirname(__file__), "..", "Reports", "logs", "gen_report.log")
 )
 
 logging.basicConfig(
@@ -35,7 +35,7 @@ def report():
     try:
         # Generate allure-report
         report_path = os.path.realpath(
-            os.path.join(os.path.dirname(__file__)), "..", "Reports"
+            os.path.join(os.path.dirname(__file__), "..", "Reports")
         )
         if os.path.exists(
             os.path.realpath(
@@ -71,12 +71,14 @@ def report():
 
     try:
         path = os.path.realpath(
-            os.path.join(os.path.dirname(__file__)),
-            "..",
-            "Reports",
-            "allure-report",
-            "widgets",
-            "summary.json",
+            os.path.join(
+                os.path.dirname(__file__),
+                "..",
+                "Reports",
+                "allure-report",
+                "widgets",
+                "summary.json",
+            )
         )
         logger.info(f"Allure report path was found at : {path}")
         title = "Test Automation Report"
@@ -92,13 +94,15 @@ def report():
     # Serve the report at localhost on free available port
     try:
         root_path = os.path.realpath(
-            os.path.join(os.path.dirname(__file__)),
-            "..",
-            "Reports",
-            "allure-report",
+            os.path.join(
+                os.path.dirname(__file__),
+                "..",
+                "Reports",
+                "allure-report",
+            )
         )
 
-        # Check for free available port using socetserver.
+        # Check for free available port using socketserver.
         with socketserver.TCPServer(("localhost", 0), None) as sock:
             free_port.append(sock.server_address[1])
             logger.info(f"Free port was found at : {free_port[0]}")
