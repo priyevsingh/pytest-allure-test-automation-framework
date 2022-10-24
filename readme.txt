@@ -3,13 +3,13 @@ README !!!
 ---------------------------------------------------
 On Windows (Use path separator as \ )
 On UNIX (Use path separator as / )
+
 ---------------------------------------------------
 ALLURE REPORT USAGES -> https://docs.qameta.io/allure-report/
+ALLURE LATEST RELEASES -> https://github.com/allure-framework/allure2/releases
 ---------------------------------------------------
 
 STEPS TO SETUP:
-    . Download latest release allure-2.* file from https://github.com/allure-framework/allure2/releases and
-      save it in the root directory.
     . Run command pip install -r requirements.txt
 ---------------------------------------------------
 COMMANDS TO MANUALLY RUN TESTS AND GENERATE REPORT:
