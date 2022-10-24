@@ -39,10 +39,12 @@ def report():
         )
         if os.path.exists(
             os.path.realpath(
-                os.path.join(os.path.dirname(__file__)),
-                "..",
-                "Reports",
-                "allure-report",
+                os.path.join(
+                    os.path.dirname(__file__),
+                    "..",
+                    "Reports",
+                    "allure-report",
+                )
             )
         ):
             op = subprocess.check_output(

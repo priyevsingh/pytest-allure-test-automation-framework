@@ -13,7 +13,7 @@ SETPS TO SETUP:
     . Run command pip install -r requirements.txt
 ---------------------------------------------------
 COMMANDS:
-    . pytest --alluredir=../Reports/allure-results --allure-severities normal,critical 
+    . pytest --alluredir=.\Reports\allure-results --allure-severities normal,critical 
     (Optional cli arguments can be used as: --browser=firefox or --browser=edge , by default --browser=chrome)
 
     . allure generate allure-results --clean
@@ -21,7 +21,7 @@ COMMANDS:
 
 ---------------------------------------------------
 TEST SUITE RUN:
-    . pytest --alluredir=../Reports/allure-results --allure-severities normal,critical TestSuite\UI\
+    . pytest --alluredir=.\Reports\allure-results --allure-severities normal,critical TestSuite\UI\
         For First Run: (there is no historical trend data)
             . Run report.py utility file.
             . Run trends.bat
@@ -31,16 +31,16 @@ TEST SUITE RUN:
             . Run report.py utility file.
 
     (Running with different browsers as cli options)
-    . pytest --alluredir=../Reports/allure-results --allure-severities normal,critical TestSuite\UI\ --browser=firefox
-    . pytest --alluredir=../Reports/allure-results --allure-severities normal,critical TestSuite\UI\ --browser=edge
+    . pytest --alluredir=.\Reports\allure-results --allure-severities normal,critical TestSuite\UI\ --browser=firefox
+    . pytest --alluredir=.\Reports\allure-results --allure-severities normal,critical TestSuite\UI\ --browser=edge
 
 ---------------------------------------------------
 INDIVIDUAL SUITE RUN:
-    . pytest --alluredir=../Reports/allure-results --allure-severities normal,critical TestSuite\UI\HomePage\
+    . pytest --alluredir=.\Reports\allure-results --allure-severities normal,critical TestSuite\UI\HomePage\
 
 ---------------------------------------------------
 TEST CASE RUN:
-    . pytest --alluredir=../Reports/allure-results --allure-severities normal,critical TestSuite\UI\HomePage\test_HomePage.py::TestHomePage::test_google_feeling_lucky_feature
+    . pytest --alluredir=.\Reports\allure-results --allure-severities normal,critical TestSuite\UI\HomePage\test_HomePage.py::TestHomePage::test_google_feeling_lucky_feature
 
 ---------------------------------------------------
 TAIL THE LIVE LOGS:
