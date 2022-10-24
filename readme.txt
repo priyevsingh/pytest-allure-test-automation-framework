@@ -4,15 +4,15 @@ README !!!
 On Windows (Use path separator as \ )
 On UNIX (Use path separator as / )
 ---------------------------------------------------
-USAGES -> https://docs.qameta.io/allure-report/
+ALLURE REPORT USAGES -> https://docs.qameta.io/allure-report/
 ---------------------------------------------------
 
-SETPS TO SETUP:
+STEPS TO SETUP:
     . Download latest release allure-2.* file from https://github.com/allure-framework/allure2/releases and
       save it in the root directory.
     . Run command pip install -r requirements.txt
 ---------------------------------------------------
-COMMANDS:
+COMMANDS TO MANUALLY RUN TESTS AND GENERATE REPORT:
     . pytest --alluredir=.\Reports\allure-results --allure-severities normal,critical 
     (Optional cli arguments can be used as: --browser=firefox or --browser=edge , by default --browser=chrome)
 
