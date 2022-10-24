@@ -132,18 +132,18 @@ def _set_browser(browser):
     options.add_argument("--disable-popup-blocking")
 
     # Firefox options
-    options = webdriver.FirefoxOptions()
-    options.add_argument("--ignore-certificate-errors")
-    options.add_argument("--ignore-ssl-errors")
-    options.add_argument("--disable-infobars")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--no-sandbox")
-    # options.add_argument('--headless')
-    options.add_argument("--disable-gpu")
-    # options.add_argument('--window-size=1920,1080')
-    # options.add_argument('--allow-running-insecure-content')
-    options.add_argument("--start-maximized")
-    options.add_argument("--disable-popup-blocking")
+    options_gecko = webdriver.FirefoxOptions()
+    options_gecko.add_argument("--ignore-certificate-errors")
+    options_gecko.add_argument("--ignore-ssl-errors")
+    options_gecko.add_argument("--disable-infobars")
+    options_gecko.add_argument("--disable-dev-shm-usage")
+    options_gecko.add_argument("--no-sandbox")
+    # options_gecko.add_argument('--headless')
+    options_gecko.add_argument("--disable-gpu")
+    # options_gecko.add_argument('--window-size=1920,1080')
+    # options_gecko.add_argument('--allow-running-insecure-content')
+    options_gecko.add_argument("--start-maximized")
+    options_gecko.add_argument("--disable-popup-blocking")
 
     if browser.lower() == "chrome":
         driver = webdriver.Chrome(
@@ -151,11 +151,12 @@ def _set_browser(browser):
         )
     elif browser.lower() == "firefox":
         driver = webdriver.Chrome(
-            service=FirefoxService(GeckoDriverManager().install()), options=options
+            service=FirefoxService(GeckoDriverManager().install()),
+            options=options_gecko,
         )
     elif browser.lower() == "edge":
         driver = webdriver.Chrome(
-            service=EdgeService(EdgeChromiumDriverManager().install()), options=options
+            service=EdgeService(EdgeChromiumDriverManager().install())
         )
     else:
         pytest.fail(f"Invalid browser name {browser}")
