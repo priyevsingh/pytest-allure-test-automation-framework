@@ -5,9 +5,9 @@ README !!!
 USAGES -> https://docs.qameta.io/allure-report/
 ---------------------------------------------------
 
-STEPS TO SETUP:
-    . Download latest release allure-2.* file from https://github.com/allure-framework/allure2/releases and replace it with
-      allure-2.19.0 directory.
+SETPS TO SETUP:
+    . Download latest release allure-2.* file from https://github.com/allure-framework/allure2/releases and
+      save it in the root directory.
     . Run command pip install -r requirements.txt
 ---------------------------------------------------
 COMMANDS:

@@ -12,7 +12,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 
-def pytest_adoption(parser):
+def pytest_addoption(parser):
     """
     Add options to the pyest command line.
     Default driver kept as chrome, at the moment.
@@ -20,7 +20,7 @@ def pytest_adoption(parser):
         parser (object): pytest cli parser object
     """
 
-    parser.adoption(
+    parser.addoption(
         "--browser",
         action="store",
         default="chrome",
